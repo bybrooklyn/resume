@@ -1,0 +1,179 @@
+\documentclass[10pt,letterpaper]{article}
+
+% ---------- Packages ----------
+\usepackage[left=0.50in,right=0.50in,top=0.43in,bottom=0.43in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{ragged2e}
+
+% ---------- Colors ----------
+\definecolor{accent}{HTML}{005F73}
+\definecolor{textgray}{HTML}{333333}
+
+% ---------- PDF / Links ----------
+\hypersetup{
+    colorlinks=true,
+    urlcolor=accent,
+    linkcolor=accent,
+    pdfauthor={Brooklyn Charlotte Halmstad},
+    pdftitle={Brooklyn Charlotte Halmstad Resume}
+}
+\urlstyle{same}
+
+% ---------- Page ----------
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\tabcolsep}{0pt}
+\renewcommand{\familydefault}{\sfdefault}
+\color{textgray}
+\RaggedRight
+\setlength{\emergencystretch}{2em}
+
+% ---------- Section Style ----------
+\titleformat{\section}
+  {\large\bfseries\color{accent}}
+  {}{0pt}{}[\vspace{1pt}\titlerule]
+
+\titlespacing*{\section}{0pt}{5pt}{5pt}
+
+% ---------- Lists ----------
+\setlist[itemize]{
+  leftmargin=1.05em,
+  topsep=1pt,
+  itemsep=0pt,
+  parsep=0pt,
+  partopsep=0pt
+}
+
+% ---------- Commands ----------
+\newcommand{\resumeItem}[1]{\item #1}
+
+\newcommand{\resumeSubheading}[4]{%
+  \textbf{#1} \hfill \textbf{#2}\\[-1pt]
+  {\small #3} \hfill {\small #4}
+}
+
+\newcommand{\projectHeading}[3]{%
+  \textbf{#1} \hfill {\small #2}\\[-1pt]
+  {\small #3}
+}
+
+\newcommand{\contactSep}{\quad|\quad}
+
+\begin{document}
+\fontsize{10}{11}\selectfont
+
+% ---------- Header ----------
+{\LARGE \textbf{Brooklyn Charlotte Halmstad}}\\[1pt]
+{\small
+New Jersey, USA
+\contactSep
+\href{mailto:you@bybrooklyn.dev}{you@bybrooklyn.dev}
+\contactSep
+\href{https://github.com/bybrooklyn}{github.com/bybrooklyn}
+\contactSep
+\href{https://bybrooklyn.dev}{bybrooklyn.dev}
+}
+
+\section{Summary}
+Rust-focused software developer building systems software, media tooling, self-hosted infrastructure, and automation across Docker, GitHub Actions, TypeScript/Vue, Cloudflare, and large project codebases.
+
+\section{Skills}
+\begin{tabularx}{\textwidth}{@{}>{\bfseries\arraybackslash}p{1.22in} X@{}}
+Languages & Rust, TypeScript, Swift, Lua, Bash \\[1pt]
+Frontend & Vue, Nuxt, Astro, React/TSX, SwiftUI \\[1pt]
+Infrastructure & Linux, Docker, Cloudflare, GitHub Actions, Gitea \\[1pt]
+Backend/Data & SQLx, SQLite, API integrations, payment processor integrations \\[1pt]
+Media/Systems & AV1/HEVC workflows, hardware-accelerated transcoding, Jellyfin plugin development \\
+\end{tabularx}
+
+\section{Selected Projects}
+
+\projectHeading{Alchemist}{Functional prototype, v0.3.x}{\href{https://alchemist-project.org}{alchemist-project.org}}
+\begin{itemize}
+  \resumeItem{Built a hardware-accelerated transcoding system that converts media libraries to AV1/HEVC with minimal setup.}
+  \resumeItem{Maintained a monorepo spanning async Rust, TypeScript/Astro, React/TSX, C\# Jellyfin plugin code, SwiftUI, Just automation, and Docusaurus docs.}
+  \resumeItem{Optimized for self-hosted deployment, hands-off automation, and practical storage savings on home media servers.}
+\end{itemize}
+
+\projectHeading{Nx86}{Pre-MVP research project}{\href{https://nx86.dev}{nx86.dev}}
+\begin{itemize}
+  \resumeItem{Developing an AArch64-to-x86\_64-v4 binary translation and emulation project focused on ahead-of-time compilation.}
+  \resumeItem{Designed an in-house compiler pipeline targeting x86\_64-v4 with planned GUI-first workflows and reproducible build artifacts.}
+\end{itemize}
+
+\projectHeading{Additional Active Projects}{Private / in progress}{Pedlar, WhyTho?}
+\begin{itemize}
+  \resumeItem{Building \textbf{Pedlar}, a private Nuxt/TypeScript CRM for pet-grooming businesses with automation, payments, and flat yearly licensing.}
+  \resumeItem{Building \textbf{WhyTho?}, a multithreaded Rust media engine exploring chunked, high-throughput H.264 encoding.}
+\end{itemize}
+
+\section{Technical Work}
+
+\resumeSubheading{Sweet Paws Sayreville}{In progress}{Client CRM / Pedlar deployment}{Private repository}
+\begin{itemize}
+  \resumeItem{Building a paid CRM deployment for a pet-grooming client to reduce reliance on expensive platforms while supporting automation and payment integrations.}
+\end{itemize}
+
+\resumeSubheading{Self-Hosted Infrastructure}{Ongoing}{Fedora, Docker, Jellyfin, Immich, Gitea, websites}{24 TB server / 5 users}
+\begin{itemize}
+  \resumeItem{Operate Docker infrastructure for Jellyfin, Immich, Gitea, websites, and client software on a 24 TB server supporting 5 users.}
+  \resumeItem{Manage domains, Cloudflare configuration, containers, backups, maintenance, and uptime for personal and project infrastructure.}
+\end{itemize}
+
+\section{Experience}
+
+\resumeSubheading{QuickChek}{Mar. 2026 -- Present}{Team Member}{New Jersey}
+\begin{itemize}
+  \resumeItem{Prepare deli food and drinks while supporting front-of-store service, facing, and daily operations.}
+\end{itemize}
+
+\resumeSubheading{Tops Friendly Markets}{Nov. 2023 -- Oct. 2025}{Store Associate}{Buffalo, NY}
+\begin{itemize}
+  \resumeItem{Handled customer service, stocking, inventory support, POS/register operations, and employee training.}
+  \resumeItem{Supported nonprofit fundraising campaigns totaling over \$3,000 during employment.}
+\end{itemize}
+
+\section{Leadership \& Volunteering}
+
+\resumeSubheading{Pride Center of New Jersey}{Nov. 2025 -- Present}{Youth Peer Support / Welcome Committee Leader}{20+ documented hours}
+\begin{itemize}
+  \resumeItem{Support youth peer-support and welcome committee programming, including welcoming attendees and maintaining a supportive environment.}
+  \resumeItem{Designed slideshow materials for youth drop-in programming and participated with the organization at Asbury Park Pride 2026.}
+\end{itemize}
+
+\section{Education}
+
+\resumeSubheading{High School Diploma Candidate}{Expected 2028}{Homeschooled}{New Jersey}
+
+% ---------- Future Resume Sections ----------
+% Keep these commented out so the PDF stays clean and one-page.
+%
+% \section{Open Source Contributions}
+% \resumeSubheading{Project / Repository Name}{Date}{Contribution Type}{Link}
+% \begin{itemize}
+%   \resumeItem{Describe the issue, pull request, patch, documentation update, or review.}
+%   \resumeItem{Mention whether it was merged, shipped, or used by maintainers.}
+% \end{itemize}
+%
+% \section{Awards \& Certifications}
+% \resumeSubheading{Award or Certification Name}{Date}{Issuer}{Credential/link}
+% \begin{itemize}
+%   \resumeItem{Add a short description only if the title is not self-explanatory.}
+% \end{itemize}
+%
+% \section{Additional Work Experience}
+% \resumeSubheading{Company Name}{Dates}{Job Title}{Location}
+% \begin{itemize}
+%   \resumeItem{Add one impact-focused bullet.}
+% \end{itemize}
+
+\end{document}
